@@ -1,16 +1,18 @@
 import mongoose from 'mongoose';
 
-const Product = new mongoose.Schema({
-    name: { type: String, required: true, unique: true },
-    image: { type: String, required: true },
-    brand: { type: String, required: true },
-    category: { type: String, required: true },
-    description: { type: String, required: true },
-    price: { type: String, required: true },
-    countInStock: { type: String, required: true },
-    rating: { type: String, required: true },
-    numReviews: { type: String, required: true },
+const User = new mongoose.Schema({
+    name: { type: String, required: true, unique: true }
+   
 
 })
+export class Foo {
+	name: string
+}
+export interface IUser {
+	_id: mongoose.Types.ObjectId;
+	name: string;
+}
+export type UserType = IUser & mongoose.Document;
+export var _model = mongoose.model <UserType> ('users',User);
 
-export default mongoose.model('Product', Product);
+export default mongoose.model('Users', User);
