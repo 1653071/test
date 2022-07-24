@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "outDir": "",
+	
+        "rootDir": "",
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "target": "ES2022",
+		"module": "es6",
+		"esModuleInterop": true,
+		
+    },
+	"include": ["**/*"],
+}
