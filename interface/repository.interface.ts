@@ -20,7 +20,7 @@ export class Repository<T extends Document>{
 		})
 		
 		var newvalues = { $set: obj };
-		return await this.a.updateOne(myquery, newvalues)
+		
 	}
 
 }
